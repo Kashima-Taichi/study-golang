@@ -1,16 +1,12 @@
 package main
 
-import "fmt"
-
-func init() {
-	fmt.Println("init execution")
-}
-
-func sub() {
-	fmt.Println("sub function")
-}
+import (
+	"fmt"
+	"os/user"
+	"time"
+)
 
 func main() {
-	sub()
-	fmt.Println("Hello world!", "second declaration")
+	fmt.Println("we will use time package", time.Now())
+	fmt.Println(user.Current())
 }
