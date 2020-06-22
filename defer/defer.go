@@ -5,6 +5,11 @@ import (
 	"os"
 )
 
+func foo() {
+	defer fmt.Println("World foo")
+	fmt.Println("hello foo")
+}
+
 func main() {
 	file, _ := os.Open("./lesson.go")
 	defer file.Close()
